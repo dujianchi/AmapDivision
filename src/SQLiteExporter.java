@@ -73,7 +73,7 @@ public class SQLiteExporter implements Exporter {
                 //  street:街道
                 ", pinyin varchar" +//全拼
                 ", pinyinShort varchar" +//缩写
-                ", parentCityCode varchar" +//上一级的 城市编码
+                ", parentAdCode varchar" +//上一级的 城市编码
                 ", parentName varchar" +//上一级的 行政区名称
                 ")";
         System.out.println(sql);
@@ -92,7 +92,7 @@ public class SQLiteExporter implements Exporter {
                     + "', '" + values.level
                     + "', '" + pinyins[0]
                     + "', '" + pinyins[1]
-                    + "', '" + (parent == null ? " " : parent.citycode)
+                    + "', '" + (parent == null ? " " : parent.adcode)
                     + "', '" + (parent == null ? " " : parent.name)
                     + "')";
             System.out.println(sql);
